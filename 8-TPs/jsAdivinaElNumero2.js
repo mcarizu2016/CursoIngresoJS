@@ -27,7 +27,42 @@ function comenzar()
 }
 
 function verificar()
+
 {
+	switch(numero){
+		case "1":
+			alert("Usted es un Psíquico");
+			break;
+
+		case "2":
+			alert("excelente percepción");
+			break;
+		
+		case "3":
+			alert("esto es suerte");
+			break;
+
+		case "4":
+			alert("excelente percepción");
+			break;
+		case "5":
+			alert("excelente técnica");
+			break;
+		case "6":
+			alert("falta técnica");
+			break;
+		default :
+			alert(" usted es un panqueque...");	
+			break;
+		
+
+	}
+
+	contadorIntentos++;
+	document.getElementById('intentos').value=contadorIntentos;
+}
+
+/*{
 	
 	numero=document.getElementById('numero').value;
 	
@@ -56,4 +91,4 @@ function verificar()
 	contadorIntentos++;
 	document.getElementById('intentos').value=contadorIntentos;
 	
-}
+}*/

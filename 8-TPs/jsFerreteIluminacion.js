@@ -9,6 +9,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
  */
  
+
 function CalcularPrecio () 
 {
  var precio =35;
@@ -16,6 +17,111 @@ function CalcularPrecio ()
  var marca=document.getElementById('Marca').value;
  var preCant;
  var desc;
+
+	 switch(cantidad)
+	{
+
+	 	
+	 	default: 
+	 		preCant = cantidad*precio;
+					desc= preCant*0.5;
+					preCant=preCant-desc;
+					preCant=preCant*0.75;
+					alert(preCant);
+					document.getElementById('precioDescuento').value=preCant;
+					break;
+		case "5":
+			
+			 	if(marca=='ArgentinaLuz'){
+			 			preCant = cantidad*precio;
+						desc= preCant*0.6;
+						preCant=preCant-desc;
+						preCant=preCant*0.6;
+						alert(preCant);
+						document.getElementById('precioDescuento').value=preCant;
+				 }
+				 else{
+				 			preCant = cantidad*precio;
+							desc = preCant*0.7;
+							preCant=preCant-desc;
+							preCant=preCant*0.7;
+							alert(preCant);
+							document.getElementById('precioDescuento').value=preCant;
+				 }
+			
+			break;
+		
+		case"4":	
+		
+
+			if (marca='ArgentinaLuz'||'FelipeLamparas')
+			{
+					preCant = cantidad*precio;
+					desc= preCant*0.75;
+					preCant=preCant-desc;
+					preCant=preCant*0.75;
+
+					alert(preCant);
+					document.getElementById('precioDescuento').value=preCant;
+			}
+			else
+				{
+					        preCant = cantidad*precio;
+							desc= preCant*0.8;
+							preCant=preCant-desc;
+							preCant=preCant*0.8;
+							alert(preCant);
+							document.getElementById('precioDescuento').value=preCant;	
+				}
+				break;
+		case "3":
+		
+			if ( marca =='ArgentinaLuz')
+			{
+			    preCant = cantidad*precio;
+				desc= preCant*0.85;
+				preCant=preCant-desc;
+				preCant=preCant*0.85;
+				alert(preCant);
+				document.getElementById('precioDescuento').value=preCant;
+			}
+			else
+			{
+				if( marca == 'FelipeLamparas')
+			    {
+				    preCant= cantidad*precio;
+					desc= preCant*0.90;
+					preCant=preCant-desc;
+					preCant=preCant*0.90;
+					alert(preCant);
+					document.getElementById('precioDescuento').value=preCant;
+				}
+				else 
+				{
+					//preCant= cantidad*precio;
+					//desc= preCant*0.95;
+					//preCant=preCant-desc;
+					preCant=preCant*0.95;
+					alert(preCant);
+					document.getElementById('precioDescuento').value=preCant;
+				}
+			}
+			break;	
+
+
+			
+			
+		if(preCant>120)
+		{
+			
+			var impuesto=preCant *0.10;
+			preCant=preCant*1.10;
+			alert("IIBB Usted pago: "+preCant+" de IIBB");
+		}
+	}
+}	
+/*{
+
 	
 	if(cantidad>5){
 
@@ -113,3 +219,5 @@ function CalcularPrecio ()
 		alert("IIBB Usted pago: "+preCant+" de IIBB");
 	}
 }
+*/
+
